@@ -1,0 +1,18 @@
+syntax = "proto3";
+
+package com.union.netty4.serialization.protobuf.message;
+
+message BaseMsgInfo {
+  uint64 msg_id_client = 1;
+	uint64 msg_id_server = 2;
+}
+
+message Login{
+  BaseMsgInfo base_msg_info = 1;
+  string name = 2;
+  string password = 3;
+}
+
+message Msg{
+  optional Login login = 1;
+}
